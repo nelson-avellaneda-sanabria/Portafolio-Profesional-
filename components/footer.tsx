@@ -1,12 +1,11 @@
 "use client"
 
-import { Heart, Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Heart, Github, Linkedin, Mail } from "lucide-react"
 import { FOOTER, NAV_LINKS, SOCIAL_LINKS } from "@/lib/portfolio-data"
 
 const socialIconMap = {
   github: Github,
   linkedin: Linkedin,
-  twitter: Twitter,
   mail: Mail,
 }
 

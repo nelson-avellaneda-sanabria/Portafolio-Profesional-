@@ -19,7 +19,7 @@ export function About() {
         <FadeInUp className="lg:col-span-2">
           <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl lg:max-w-none">
             <Image
-              src="/images/profile.jpg"
+              src="/images/profile.jpeg"
               alt={`Foto de ${PERSONAL_INFO.name}`}
               fill
               className="object-cover"

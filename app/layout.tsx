@@ -7,11 +7,11 @@ const _inter = Inter({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Carlos Mendoza | Full-Stack Developer',
+  title: 'Nelson Avellaneda | Full-Stack Analyst and Developer',
   description:
-    'Portafolio profesional de Carlos Mendoza. Desarrollador full-stack especializado en React, Next.js y Node.js. Construyendo experiencias digitales excepcionales.',
-  keywords: ['desarrollador', 'full-stack', 'react', 'next.js', 'portfolio', 'web developer'],
-  authors: [{ name: 'Carlos Mendoza' }],
+    'Portafolio profesional de Nelson Avellaneda. Analista y desarrollador full-stack especializado en React, Next.js y Node.js. Construyendo experiencias digitales excepcionales.',
+  keywords: ['analista', 'full-stack', 'react', 'next.js', 'portfolio', 'web developer'],
+  authors: [{ name: 'Nelson Avellaneda' }],
   icons: {
     icon: [
       {

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, MapPin, Send, Github, Linkedin } from "lucide-react"
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/portfolio-data"
 import { SectionWrapper, SectionHeader } from "@/components/section-wrapper"
 import { FadeInUp, FadeIn } from "@/components/motion-wrapper"
@@ -9,7 +9,6 @@ import { FadeInUp, FadeIn } from "@/components/motion-wrapper"
 const socialIconMap = {
   github: Github,
   linkedin: Linkedin,
-  twitter: Twitter,
   mail: Mail,
 }
 
