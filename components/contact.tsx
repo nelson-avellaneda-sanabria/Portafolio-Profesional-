@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, type FormEvent } from "react"
+import { useState, useEffect, type FormEvent } from "react"
 import { Mail, MapPin, Send, Github, Linkedin } from "lucide-react"
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/portfolio-data"
 import { SectionWrapper, SectionHeader } from "@/components/section-wrapper"
 import { FadeInUp, FadeIn } from "@/components/motion-wrapper"
+import emailjs from "@emailjs/browser"
 
 const socialIconMap = {
   github: Github,
@@ -36,6 +37,10 @@ export function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+    useEffect(() => {
+    emailjs.init("yqla4kLhBE_XeHdeU")
+  }, [])
+
   const validate = (): boolean => {
     const newErrors: FormErrors = {}
 
@@ -57,16 +62,38 @@ export function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
+  // 🔥 AQUÍ ESTÁ LA ÚNICA PARTE CAMBIADA
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     if (!validate()) return
 
     setIsSubmitting(true)
-    // Simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1200))
+
+    try {
+      await emailjs.send(
+        "service_h8rnr5l",
+        "template_p2gha47",
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "yqIa4kLhBE_XeHdeU"
+      )
+
+      setIsSubmitted(true)
+      setFormData({ name: "", email: "", subject: "", message: "" })
+
+  } catch (error: any) {
+  console.log("ERROR COMPLETO:", error)
+  console.log("STATUS:", error?.status)
+  console.log("TEXT:", error?.text)
+
+  alert("Error: " + (error?.text || "No se pudo enviar"))
+}
+
     setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", subject: "", message: "" })
   }
 
   const handleChange = (
