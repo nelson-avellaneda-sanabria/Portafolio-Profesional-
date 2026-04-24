@@ -47,26 +47,27 @@ export const PROJECTS = [
     demoUrl: "https://calculadora-liard-nine.vercel.app/",
     featured: true,
   },
+ {
+   title: "TaskFlow - Gestor de Tareas",
+   description:
+     "TaskFlow es una aplicación web de gestión de tareas desarrollada con Next.js 16 y React 19, que ofrece dashboard analítico, calendario interactivo, estadísticas visuales y sistema completo de importación/exportación de datos, todo con persistencia local y diseño oscuro responsive.",
+   image: "/images/project-2.jpg",
+   technologies: ["Next.js", "React", "TypeScript", "Tailwind", "LocalStorage"],
+   githubUrl: "https://github.com/nelson-avellaneda-sanabria/Gestor-de-tareas-",
+   demoUrl: "https://gestor-de-tareas-ivory-xi.vercel.app/",
+   featured:true,
+ },
   {
     title: "En desarrollo: Chat Inteligente",
     description:
       "Aplicacion de chat inteligente con procesamiento de lenguaje natural, respuestas en tiempo real y soporte multilenguaje.",
-    image: "/images/project-2.jpg",
+    image: "/images/development.jpg",
     technologies: ["React", "Node.js", "OpenAI", "WebSocket", "MongoDB"],
    // githubUrl: "...",
    // demoUrl: "...",
     featured: true,
   },
- // {
- //   title: "Task Management App",
- //   description:
- //     "Aplicacion de gestion de tareas con tableros Kanban, asignacion de equipos, notificaciones en tiempo real y reportes de productividad.",
- //   image: "/images/project-3.jpg",
- //   technologies: ["Next.js", "Prisma", "tRPC", "Tailwind", "Supabase"],
- //   githubUrl: "https://github.com",
- //   demoUrl: "https://demo.com",
- //   featured: false,
- // }
+ 
  // {
  //   title: "Analytics Dashboard",
  //   description:
