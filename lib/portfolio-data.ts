@@ -61,7 +61,7 @@ export const PROJECTS = [
     title: "En desarrollo: Chat Inteligente",
     description:
       "Aplicacion de chat inteligente con procesamiento de lenguaje natural, respuestas en tiempo real y soporte multilenguaje.",
-    image: "/images/development.jpg",
+    image: "/images/Development.jpg",
     technologies: ["React", "Node.js", "OpenAI", "WebSocket", "MongoDB"],
    // githubUrl: "...",
    // demoUrl: "...",
